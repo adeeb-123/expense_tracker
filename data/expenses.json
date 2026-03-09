@@ -2,7 +2,8 @@
   {
     "id": 891,
     "description": "Dinner",
-    "amount": "1743"
+    "amount": 1743,
+    "date": ""
   },
   {
     "id": 2,

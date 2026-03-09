@@ -7,12 +7,28 @@ A simple command-line expense tracker built with Node.js.
 npm install
 npm link
 
-## Usage
+## Commands
 
-Add expense
+Add Expense
 
 expense-tracker add --description "Lunch" --amount 20
 
-List expenses
+List Expenses
 
 expense-tracker list
+
+Delete Expense
+
+expense-tracker delete --id 1
+
+Monthly Summary
+
+expense-tracker summary --month 3
+
+Export to CSV
+
+expense-tracker export
+
+Import from CSV
+
+expense-tracker import expenses.csv
