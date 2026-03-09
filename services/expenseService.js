@@ -26,3 +26,26 @@ export function addExpense(description, amount) {
 
   return newExpense;
 }
+
+export function deleteExpense(id) {
+  const expenses = getExpenses();
+
+  const filtered = expenses.filter(e => e.id !== Number(id));
+
+  saveExpenses(filtered);
+}
+
+export function getSummary(month) {
+  const expenses = getExpenses();
+
+  let filtered = expenses;
+
+  if (month) {
+    filtered = expenses.filter(e => {
+      const expenseMonth = new Date(e.date).getMonth() + 1;
+      return expenseMonth === Number(month);
+    });
+  }
+
+  return filtered.reduce((sum, e) => sum + e.amount, 0);
+}

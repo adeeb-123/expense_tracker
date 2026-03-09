@@ -1,12 +1,13 @@
 [
   {
-    "id": 1,
-    "description": "Car Loan EMI",
-    "amount": 7500
-  },
-  {
     "id": 891,
     "description": "Dinner",
     "amount": "1743"
+  },
+  {
+    "id": 2,
+    "description": "Outing",
+    "amount": 2000,
+    "date": "2026-03-09"
   }
 ]
