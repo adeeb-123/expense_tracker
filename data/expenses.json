@@ -1,12 +1,12 @@
 [
   {
-    "id": 891,
-    "description": "Dinner",
-    "amount": 1743,
-    "date": ""
+    "id": 56,
+    "description": "Outing",
+    "amount": 2000,
+    "date": "2026-03-09"
   },
   {
-    "id": 2,
+    "id": 56,
     "description": "Outing",
     "amount": 2000,
     "date": "2026-03-09"

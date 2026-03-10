@@ -1,12 +1,13 @@
 import fs from "fs";
 import csv from "csv-parser";
 import chalk from "chalk";
-import { saveExpenses } from "../services/expenseService.js";
+import { getExpenses, saveExpenses } from "../services/expenseService.js";
 
 export default function importCommand(program) {
 
   program.command("import <file>").action((file) => {
 
+    const expenses = getExpenses();
     const results = [];
 
     fs.createReadStream(file)
@@ -22,8 +23,8 @@ export default function importCommand(program) {
 
       })
       .on("end", () => {
-
-        saveExpenses(results);
+        expenses.push(...results);
+        saveExpenses(expenses);
 
         console.log(chalk.green("✔ Expenses imported successfully"));
 
