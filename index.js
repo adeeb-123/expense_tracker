@@ -7,6 +7,7 @@ import deleteCommand from "./commands/delete.js";
 import summaryCommand from "./commands/summary.js";
 import exportCommand from "./commands/export.js";
 import importCommand from "./commands/import.js";
+import didYouMean from "didyoumean";
 
 const program = new Command();
 
@@ -21,5 +22,18 @@ deleteCommand(program);
 summaryCommand(program);
 exportCommand(program);
 importCommand(program);
+
+const commands = ["add", "list", "delete", "summary", "export", "import"];
+
+const input = process.argv[2];
+
+if (input && !commands.includes(input)) {
+  const suggestion = didYouMean(input, commands);
+
+  if (suggestion) {
+    console.log(`Did you mean "${suggestion}"?`);
+  }
+}
+
 
 program.parse();

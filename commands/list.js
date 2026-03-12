@@ -12,9 +12,11 @@ export default function listCommand(program) {
       head: ["ID", "Description", "Amount", "Date"]
     });
 
-    expenses.forEach(e => {
-      table.push([e.id, e.description, `₹${e.amount}`, e.date]);
-    });
+   expenses
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
+  .forEach(e => {
+    table.push([e.id, e.description, `₹${e.amount}`, e.date]);
+  });
 
     console.log(chalk.blue("\nYour Expenses\n"));
     console.log(table.toString());

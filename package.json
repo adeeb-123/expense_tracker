@@ -1,10 +1,10 @@
 {
-  "name": "expemce-tracker",
+  "name": "@adeeb123/expense-tracker",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "bin": {
-    "expense-tracker": "./index.js"
+    "expense-tracker": "index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,12 +13,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "asciichart": "^1.5.25",
     "axios": "^1.13.6",
     "chalk": "^5.6.2",
     "cli-table3": "^0.6.5",
     "commander": "^14.0.3",
     "csv-parser": "^3.2.0",
-    "csv-writer": "^1.6.0"
+    "csv-writer": "^1.6.0",
+    "didyoumean": "^1.2.2"
   },
   "type": "module"
 }
